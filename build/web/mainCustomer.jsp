@@ -1,8 +1,3 @@
-<%-- 
-    Document   : maincustomer
-    Created on : Dec 8, 2021, 11:21:35 AM
-    Author     : DR HANIM
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,16 +19,16 @@
             <input  name="returnloc" type="text">
             <br>
             Pick-up Date<br>
-            <input  name="pickupdate" type="text">
+            <input  name="pickupdate" type="date">
             <br>
             Pick-up Time<br>
-            <input  name="pickuptime" type="text">
+            <input  name="pickuptime" type="time">
             <br>
             Return Date<br>
-            <input  name="returndate" type="text">
+            <input  name="returndate" type="date">
             <br>
             Return Time<br>
-            <input  name="returntime" type="text">
+            <input  name="returntime" type="time">
             <br>
             Additional drivers?<br>
             <input  name="driver" type="text">
