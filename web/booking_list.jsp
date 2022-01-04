@@ -41,7 +41,7 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Vehicle Model</th>
+                    <th scope="col">Vehicle Model ID</th>
                     <th scope="col">Booking Date</th>
                     <th scope="col">Pickup Date</th>
                     <th scope="col">Return Date</th>

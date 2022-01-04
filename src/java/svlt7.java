@@ -21,7 +21,7 @@ public class svlt7 extends HttpServlet {
 
             HttpSession session = request.getSession();
             String vehicleID = session.getAttribute("vehicleID").toString();
-            
+            //nnnn
             String driver = "com.mysql.jdbc.Driver";
             String connectionUrl = "jdbc:mysql://localhost:3306/";
             String database = "rentalproject";
