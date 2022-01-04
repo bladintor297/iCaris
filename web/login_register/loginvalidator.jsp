@@ -63,7 +63,7 @@
                                    else
                                     response.sendRedirect("../mainAdmin.jsp");
                                 }
-//else
+//else if
 //                                {
 //                                    session.setAttribute("name",userdbName);
 //                                    response.sendRedirect("../customer/mainCustomer.jsp");
