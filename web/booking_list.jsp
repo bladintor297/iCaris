@@ -1,4 +1,8 @@
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -37,8 +41,8 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
                     <th scope="col">Vehicle Model</th>
+                    <th scope="col">Booking Date</th>
                     <th scope="col">Pickup Date</th>
                     <th scope="col">Return Date</th>
                     <th scope="col">Status</th>
@@ -47,8 +51,46 @@
                 </tr>
             </thead>
             <tbody>
-      
-            </tbody>
+                    <%
+                        String driver = "com.mysql.jdbc.Driver";
+                        String connectionUrl = "jdbc:mysql://localhost:3306/";
+                        String database = "rentalproject";
+                        String userid = "root";
+                        String password = "";
+                        
+                        try {
+                            Class.forName(driver);
+                            Connection conn = DriverManager.getConnection(connectionUrl+database,userid,password);
+                           
+                            //prepared statement
+                            String sqlselect = "select * from booking";
+                            PreparedStatement ps = conn.prepareStatement(sqlselect);
+   
+                            ResultSet rs = ps.executeQuery();
+                            
+                            while(rs.next()){
+                                
+                            %>    
+                    <tr>
+                        <th scope="row"><a href="viewVehicle.jsp?vehicleID=<%=rs.getString("bookingID")%>"><%=rs.getString("bookingID")%></th>
+                        <td> <a href="viewVehicle.jsp?bookingID=<%=rs.getString("bookingID")%>"><%= rs.getString("vehicleID") %> </td>
+                        <td> <%= rs.getString("bookDate") %> </td>
+                        <td> <%= rs.getString("pickupDate") %> </td>
+                        <td> <%= rs.getString("returnDate") %> </td>
+                        <td> <%= rs.getString("status") %> </td>
+                        <td> <%= rs.getString("extendReturnDate") %> </td>
+                        <td> <%= rs.getString("extendStatus") %> </td>
+                    </tr>
+                            <%
+                            }
+       
+                        }
+                        catch(Exception ex) {
+                            ex.printStackTrace();
+                        }
+                    %>
+                   
+                </tbody>
         </table>
         </div>    
     </body>
