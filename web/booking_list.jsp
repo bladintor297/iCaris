@@ -72,8 +72,8 @@
                                 
                             %>    
                     <tr>
-                        <th scope="row"><a href="viewVehicle.jsp?vehicleID=<%=rs.getString("bookingID")%>"><%=rs.getString("bookingID")%></th>
-                        <td> <a href="viewVehicle.jsp?bookingID=<%=rs.getString("bookingID")%>"><%= rs.getString("vehicleID") %> </td>
+                        <th scope="row"><a href="viewBooking.jsp?bookingID=<%=rs.getString("bookingID")%>"><%=rs.getString("bookingID")%></th>
+                        <td> <a href="viewBooking.jsp?bookingID=<%=rs.getString("bookingID")%>"><%= rs.getString("vehicleID") %> </td>
                         <td> <%= rs.getString("bookDate") %> </td>
                         <td> <%= rs.getString("pickupDate") %> </td>
                         <td> <%= rs.getString("returnDate") %> </td>

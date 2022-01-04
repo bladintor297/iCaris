@@ -18,11 +18,10 @@ public class svlt7 extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            //fetch data
+
             HttpSession session = request.getSession();
             String vehicleID = session.getAttribute("vehicleID").toString();
             
-            //work on database part
             String driver = "com.mysql.jdbc.Driver";
             String connectionUrl = "jdbc:mysql://localhost:3306/";
             String database = "rentalproject";
