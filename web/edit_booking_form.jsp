@@ -7,6 +7,6 @@
         <title>Edit Booking Form</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Edit Booking # </h1>
     </body>
 </html>

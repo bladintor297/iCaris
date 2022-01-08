@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Confirmation</title>
+        <title>Delete Confirmation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="admin.css">
@@ -24,6 +24,7 @@
     <body>
         <%@include file="headerAdmin.jsp" %>
         <%
+            //nn
             String vehicleID = session.getAttribute("bookingID").toString();
             
         %>
