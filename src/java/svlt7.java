@@ -19,7 +19,7 @@ public class svlt7 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
-            //nnn
+            //nn
             HttpSession session = request.getSession();
             String vehicleID = session.getAttribute("vehicleID").toString();
             //nnnn

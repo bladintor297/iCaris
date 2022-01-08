@@ -24,7 +24,7 @@
     <body>
         <%@include file="headerAdmin.jsp" %>
         <%
-            //nn
+            //nnn
             String vehicleID = session.getAttribute("bookingID").toString();
             
         %>

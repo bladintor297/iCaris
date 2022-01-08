@@ -14,5 +14,6 @@ public class svlt4 extends HttpServlet {
             throws ServletException, IOException {
        
         response.sendRedirect("add_vehicle_form.jsp");
+        //nn
     }
 }

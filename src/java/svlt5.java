@@ -23,7 +23,7 @@ public class svlt5 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+            //nn
             String type = request.getParameter("type");
             String brand = request.getParameter("brand");
             String model = request.getParameter("model");

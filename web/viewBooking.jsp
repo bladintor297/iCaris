@@ -28,7 +28,7 @@
     <body>
         <%@include file="headerAdmin.jsp" %>
         <%
-            //nn
+            //nnn
             String bookingID = request.getParameter("bookingID");
         %>
         <h1>Booking #<%= bookingID %></h1>
