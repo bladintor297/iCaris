@@ -20,11 +20,10 @@ import javax.servlet.http.Part;
 @MultipartConfig(maxFileSize = 16177216)
 public class svlt5 extends HttpServlet {
     PrintWriter out;
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            //fetch data
+
             String type = request.getParameter("type");
             String brand = request.getParameter("brand");
             String model = request.getParameter("model");
@@ -40,7 +39,6 @@ public class svlt5 extends HttpServlet {
             
             Part part=request.getPart("image");
             
-            //work on database part
             String driver = "com.mysql.jdbc.Driver";
             String connectionUrl = "jdbc:mysql://localhost:3306/";
             String database = "rentalproject";
@@ -76,12 +74,11 @@ public class svlt5 extends HttpServlet {
                 
                 log(sqlinsert);
             
-                response.sendRedirect("mainAdmin.jsp");
+                response.sendRedirect("vehicle_list.jsp");
             }
             
             catch(Exception ex){
                 ex.printStackTrace();
             }
-        }
     }
 }
